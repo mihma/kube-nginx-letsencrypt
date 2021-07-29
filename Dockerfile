@@ -1,8 +1,7 @@
-FROM fedora:24
-MAINTAINER Seth Jennings <sethdjennings@gmail.com>
+FROM ubuntu:latest
 
-RUN dnf install certbot -y && dnf clean all
-RUN mkdir /etc/letsencrypt
+RUN apt-get update
+RUN apt-get install -y certbot python curl
 
 CMD ["/entrypoint.sh"]
 

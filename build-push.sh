@@ -1,7 +1,6 @@
 #/bin/bash
 
-docker build --tag sjenning/kube-nginx-letsencrypt:0.8.1-1 .
+docker build --tag mihma/certbot:latest .
 echo "docker login before continuing"
 read
-docker push sjenning/kube-nginx-letsencrypt:0.8.1-1
-
+docker push mihma/certbot:latest
